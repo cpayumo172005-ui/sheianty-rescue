@@ -304,7 +304,7 @@ function update(dt){
   /* ghosts */
   ghosts.forEach(function(g){
     if(g.delay>0){g.delay-=dt;if(g.delay<=0){g.delay=0;g.safe=false;}return;}
-    move(g,(scared(g)?3:4)*dt,chooseGhost,null);
+    move(g,(scared(g)?2.2:2.6)*dt,chooseGhost,null);
   });
   /* collisions */
   var a=pos(player);
